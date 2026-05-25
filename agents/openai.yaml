@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write PRD"
+  short_description: "面向产品经理的结构化 PRD 撰写模板"
+  default_prompt: "Use $write-prd 根据业务背景撰写一份结构化中文 PRD。"
