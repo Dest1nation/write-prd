@@ -27,6 +27,8 @@ description: Create, refine, review, or template structured product requirement 
 | Mixed | Combine only the modules that materially apply | Avoid filling every template section by default |
 
 Supplementary rules:
+- Treat status changes as an Approval / Lifecycle module and include a state machine whenever status affects visible data, available actions, permissions, approval handling, scheduled or business-event processing, or downstream business results.
+- Do not generate a state machine only for transient operation results such as loading, save success/failure, export processing completion, or message delivery status unless those statuses drive user operations or business decisions.
 - Put business rules and calculation rules under "系统规则/数据规则" when they drive implementation.
 - Omit a separate functional requirement list when scope and page details already cover the same capabilities, unless prioritization or delivery planning is needed.
 - Include user analysis, business attachments, business flow, system scenarios, system flow, state machine, and functional requirement list only when they add decisions not already clear from scope.
@@ -37,6 +39,7 @@ Supplementary rules:
 - Prefer numbered headings matching the template's six major sections, while omitting irrelevant subsections.
 - Use tables for function lists, filters, table columns, form fields, permission matrices, status transition details, export fields, and open questions.
 - Use Mermaid only for cross-system flows, approval/lifecycle flows, complex branching, or state machines. Read `references/rules/mermaid-diagrams.md` before drafting or revising diagrams.
+- When a business lifecycle status exists under the rule above, include its Mermaid state machine even if the transitions appear simple; do not leave status changes only in prose or an action table.
 - For page details, separate list top actions, list row actions, row status-action mapping, in-page actions, and operation form fields when they differ.
 - Include non-functional requirements and acceptance criteria when they affect launch readiness, business compliance, data handling, user-visible performance, permission audit, historical data, or user acceptance. Avoid writing technical operation plans unless the user asks for a technical PRD.
 - Prefer concrete nouns, measurable rules, trigger conditions, validation rules, permission rules, edge cases, and data rules. Avoid vague phrases such as "optimize experience".

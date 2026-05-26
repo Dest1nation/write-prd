@@ -72,11 +72,13 @@ Capture:
 
 Question:
 ```markdown
-这个需求是否涉及状态流转、业务规则或权限？例如待提交、审核中、已归档；或者按部门数据权限展示列表。
+这个需求是否涉及状态流转、业务规则或权限？例如待提交、审核中、已归档；不同状态是否影响页面展示、可执行操作、权限、审批或后续业务结果；或者是否按部门数据权限展示列表。
 ```
 
 Capture:
 - Statuses and transitions
+- Whether the statuses form a business lifecycle and require a state machine
+- Status effects on display, actions, permissions, approvals, scheduled/business-event processing, or downstream results
 - Business rules/data rules
 - Menu permissions
 - Button permissions
@@ -106,7 +108,7 @@ Check these items before drafting:
 | Users | Are primary users and usage scenarios clear? |
 | Scope | Are involved systems/pages, in-scope items, and out-of-scope items clear? |
 | Operations | Are list top actions, row actions, in-page actions, and forms clear where relevant? |
-| Rules | Are key business rules, data rules, field validation, status transitions, or approval rules clear where relevant? |
+| Rules | Are key business rules, data rules, field validation, status transitions, or approval rules clear where relevant? If status changes exist, is it clear whether they affect display, actions, permissions, approval, automatic processing, or downstream results and therefore require a state machine? |
 | Permissions | Are menu, button, data, and attachment permissions clear where relevant? |
 | Data | Are data sources, data口径, import/export, historical data, or snapshot needs clear where relevant? |
 | Launch | Are rollout scope, historical data handling, and acceptance criteria clear enough for a PRD draft? |
@@ -165,6 +167,8 @@ Use this structure:
 ## 5. 状态、规则和权限
 
 - 状态流转：
+- 状态是否构成业务生命周期/是否需要状态机：
+- 状态对展示、操作、权限、审批或后续业务结果的影响：
 - 业务规则/数据规则：
 - 菜单权限：
 - 按钮权限：

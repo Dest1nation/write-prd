@@ -6,7 +6,8 @@ Use these rules when creating, reviewing, or revising PRD diagrams.
 
 - Use `flowchart TD` for system flows with cross-system processing, branching, validation, asynchronous jobs, and exception paths.
 - Use `sequenceDiagram` when the main value is showing interaction order between roles, front end, back end, databases, and external systems.
-- Use `stateDiagram-v2` for status machines and lifecycle changes.
+- Use `stateDiagram-v2` when a business object's status affects visible data, available actions, permissions, approval handling, scheduled or business-event processing, or downstream business results.
+- Do not use a state machine solely for transient operation results such as loading, save success/failure, or one-time export completion unless they drive business decisions or subsequent operations.
 
 ## General Rules
 
